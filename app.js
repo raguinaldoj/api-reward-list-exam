@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+var fs = require('fs')
 const mongoose = require('mongoose');
 const rewardListRoute = require('./routes/rewardListRoute');
 const https = require('https')
