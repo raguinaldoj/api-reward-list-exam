@@ -20,4 +20,4 @@ mongoose.connect(process.env.DB_CONNECTION , (error) => {
     console.log(error ? error : 'db connected!');
 });
 
-app.listen(process.env.HOST);
+app.listen(process.env.HOST || 3000);
