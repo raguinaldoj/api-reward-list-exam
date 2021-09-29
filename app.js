@@ -16,7 +16,7 @@ app.get('/', () => {
 
 app.use('/rewardList', rewardListRoute);
 
-mongoose.connect(process.env.DB_CONNECTION || 'mongodb+srv://admin:password2020@app-list-db.dsmed.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' , (error) => {
+mongoose.connect(process.env.DB_CONNECTION, (error) => {
     console.log(error ? error : 'db connected!');
 });
 
