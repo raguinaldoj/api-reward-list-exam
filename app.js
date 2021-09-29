@@ -20,4 +20,4 @@ mongoose.connect(process.env.DB_CONNECTION || 'mongodb+srv://admin:password2020@
     console.log(error ? error : 'db connected!');
 });
 
-app.listen(process.env.HOST || 3000);
+app.listen(process.env.PORT || 3000);
