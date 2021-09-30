@@ -20,6 +20,16 @@ router.get('/:id', async ( req, res ) => {
     }
 });
 
+router.put('/:id', async ( req, res ) => {
+    try {
+        let reward = await RewardList.findById(req.params.id);
+        const rewards = await RewardList.findByIdAndUpdate(req.params.id, {"quantity": (parseInt(reward.quantity)-1).toString()});
+        res.json(rewards);
+    } catch (error) {
+        res.json({ message: err})
+    }
+});
+
 router.post('/', async ( req, res ) => {
     const reward = new RewardList({
         name: req.body.name,
